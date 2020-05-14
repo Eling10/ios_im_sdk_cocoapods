@@ -1,0 +1,6 @@
+framework module ElingIM {
+  umbrella header "ElingIM-umbrella.h"
+
+  export *
+  module * { export * }
+}
