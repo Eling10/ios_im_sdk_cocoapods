@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ElingIM'
-  s.version          = '0.0.1'
+  s.version          = '1.0.0'
   s.summary          = 'ElingIM.'
 
   s.description      = <<-DESC
@@ -15,7 +15,8 @@ ElingIM：iOS端IM聊天SDK
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'ElingIM/Classes/ElingIM/**/*.{h}'
+  s.source_files = 'ElingIM/Classes/*.{h}'
+  s.public_header_files = 'ElingIM/Classes/*.{h}'
   s.vendored_frameworks = 'ElingIM/Classes/ElingIM.framework'
 
   s.libraries = [
@@ -25,7 +26,7 @@ ElingIM：iOS端IM聊天SDK
   ]
  
   s.xcconfig = {
-      'VALID_ARCHS' => 'arm64'
+      'VALID_ARCHS' => 'arm64 arm64e'
   }
   
   s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO' }
@@ -35,6 +36,7 @@ ElingIM：iOS端IM聊天SDK
   s.dependency 'FMDB', '~> 2.7.5'
   s.dependency 'MJExtension', '~> 3.2.1'
   s.dependency 'AliyunOSSiOS', '~> 2.10.8'
-  s.dependency 'XCBaseModule'
+  s.dependency 'XCApplicationHelper', '~> 0.0.1'
+  s.dependency 'XCCategory', '~> 1.0.8'
 
 end
