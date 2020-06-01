@@ -18,7 +18,8 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "ElingIM/Classes/ElingIM/**/*.{h}",
+  "source_files": "ElingIM/Classes/*.{h}",
+  "public_header_files": "ElingIM/Classes/*.{h}",
   "vendored_frameworks": "ElingIM/Classes/ElingIM.framework",
   "libraries": [
     "z",
@@ -26,7 +27,7 @@
     "bz2"
   ],
   "xcconfig": {
-    "VALID_ARCHS": "arm64"
+    "VALID_ARCHS": "arm64 arm64e"
   },
   "pod_target_xcconfig": {
     "ENABLE_BITCODE": "NO"
@@ -47,8 +48,11 @@
     "AliyunOSSiOS": [
       "~> 2.10.8"
     ],
-    "XCBaseModule": [
-
+    "XCApplicationHelper": [
+      "~> 0.0.1"
+    ],
+    "XCCategory": [
+      "~> 1.0.8"
     ]
   }
 }

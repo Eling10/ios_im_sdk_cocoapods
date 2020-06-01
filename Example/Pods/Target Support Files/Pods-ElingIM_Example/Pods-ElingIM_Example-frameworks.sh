@@ -153,24 +153,20 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/XCBaseModule/XCBaseModule.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/XCApplicationHelper/XCApplicationHelper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XCCategory/XCCategory.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XCDateUnit/XCDateUnit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/XCNetworking/XCNetworking.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/AliyunOSSiOS/AliyunOSSiOS.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/XCBaseModule/XCBaseModule.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/XCApplicationHelper/XCApplicationHelper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XCCategory/XCCategory.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/XCDateUnit/XCDateUnit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/XCNetworking/XCNetworking.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
